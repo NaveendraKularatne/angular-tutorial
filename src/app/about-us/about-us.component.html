@@ -1,5 +1,15 @@
 <div class="container">
-  <button (click)="show()" class="btn btn-success">Click Here</button>
-
-  <button (click)="consoleCheck()" class="btn btn-info">Check this</button>
+  <table class="table">
+    <tr>
+      <th>ID</th>
+      <th>NAME</th>
+      <th>EMAIL</th>
+    </tr>
+    <tr *ngFor="let employee of employees">
+      <td>{{employee.id}}</td>
+      <td>{{employee.name}}</td>
+      <td>{{employee.email}}</td>
+      <td><button type="button" class="btn btn-danger">Delete</button></td>
+    </tr>
+  </table>
 </div>
